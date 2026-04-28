@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import Container from '../ui/Container'
+import Button from '../ui/Button'
 
 const links = [
   { to: '/', label: 'Home', end: true },
@@ -37,7 +39,7 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-40 bg-white border-b border-ink/10">
-      <div className="mx-auto max-w-[1280px] px-6 lg:px-10 h-[72px] flex items-center justify-between">
+      <Container className="h-[72px] flex items-center justify-between">
         <Link to="/" aria-label="Darshna Studio" className="flex items-center">
           <Wordmark />
         </Link>
@@ -60,12 +62,9 @@ export default function Nav() {
               {l.label}
             </NavLink>
           ))}
-          <Link
-            to="/contact"
-            className="bg-ink text-white text-sm px-5 py-3 hover:bg-ink/90 transition-colors"
-          >
+          <Button to="/contact" variant="primary" size="sm">
             Get in Touch
-          </Link>
+          </Button>
         </nav>
 
         <button
@@ -77,7 +76,7 @@ export default function Nav() {
         >
           <Menu size={24} strokeWidth={1.5} />
         </button>
-      </div>
+      </Container>
 
       {open && (
         <div className="fixed inset-0 z-50 bg-ink text-white lg:hidden flex flex-col">
@@ -116,13 +115,15 @@ export default function Nav() {
                 {l.label}
               </NavLink>
             ))}
-            <Link
+            <Button
               to="/contact"
+              variant="inverted"
+              size="md"
               onClick={() => setOpen(false)}
-              className="mt-6 inline-block bg-white text-ink text-sm px-6 py-4 w-fit"
+              className="mt-6 w-fit"
             >
               Get in Touch
-            </Link>
+            </Button>
           </nav>
         </div>
       )}

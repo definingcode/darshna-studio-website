@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Container from '../ui/Container'
 
 const iconProps = {
   width: 18,
@@ -54,7 +55,7 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="bg-ink text-mid">
-      <div className="mx-auto max-w-[1280px] px-6 lg:px-10 py-20">
+      <Container className="py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
           <div>
             <img
@@ -128,7 +129,7 @@ export default function Footer() {
         <div className="mt-20 pt-8 border-t border-gold text-xs text-mid">
           Founded 1993. © 2026 Darshna Studio. All rights reserved.
         </div>
-      </div>
+      </Container>
     </footer>
   )
 }

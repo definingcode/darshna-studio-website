@@ -1,4 +1,6 @@
 import { clients } from '../../data/clients'
+import Container from '../ui/Container'
+import SectionLabel from '../ui/SectionLabel'
 
 const styleClasses = {
   sans: 'font-sans font-normal',
@@ -12,17 +14,17 @@ export default function LogoMarquee() {
 
   return (
     <section className="bg-white pb-24 lg:pb-32">
-      <div className="mx-auto max-w-[1280px] px-6 lg:px-10 py-16 lg:py-24">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-medium uppercase tracking-[0.08em]">
-          <span className="text-mid">01 / Roster</span>
-          <span className="text-mid" aria-hidden="true">·</span>
-          <span className="text-ink">Some of the names we've shot for</span>
-        </div>
+      <Container className="py-16 lg:py-24">
+        <SectionLabel
+          number="01"
+          label="Roster"
+          phrase="Some of the names we've shot for"
+        />
         <p className="mt-6 max-w-[640px] text-mid leading-relaxed">
           From manufacturing and real estate to healthcare and technology.
           Indian enterprises and MNCs alike.
         </p>
-      </div>
+      </Container>
 
       <div className="marquee-wrap relative w-full overflow-hidden marquee-mask h-[80px] lg:h-[120px]">
         <div className="marquee-track flex h-full items-center">

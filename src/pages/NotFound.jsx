@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Button from '../components/ui/Button'
 
 export default function NotFound() {
   return (
@@ -7,12 +7,9 @@ export default function NotFound() {
         This frame doesn't exist.
       </h1>
       <p className="mt-4 text-mid">Let's get you back to ones that do.</p>
-      <Link
-        to="/"
-        className="mt-10 inline-block bg-ink text-white text-sm px-6 py-4 hover:bg-ink/90 transition-colors"
-      >
+      <Button to="/" variant="primary" size="md" className="mt-10">
         Return Home
-      </Link>
+      </Button>
     </div>
   )
 }
