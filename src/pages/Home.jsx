@@ -1,6 +1,7 @@
 import Hero from '../components/home/Hero'
 import StatsStrip from '../components/home/StatsStrip'
 import LogoMarquee from '../components/home/LogoMarquee'
+import ServicesTeaser from '../components/home/ServicesTeaser'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <StatsStrip />
       <LogoMarquee />
+      <ServicesTeaser />
     </>
   )
 }
