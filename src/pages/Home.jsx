@@ -4,6 +4,7 @@ import LogoMarquee from '../components/home/LogoMarquee'
 import ServicesTeaser from '../components/home/ServicesTeaser'
 import AboutPreview from '../components/home/AboutPreview'
 import PortfolioTeaser from '../components/home/PortfolioTeaser'
+import ClosingCTA from '../components/home/ClosingCTA'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesTeaser />
       <AboutPreview />
       <PortfolioTeaser />
+      <ClosingCTA />
     </>
   )
 }
