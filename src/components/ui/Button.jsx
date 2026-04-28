@@ -6,11 +6,10 @@ const sizeClass = {
   lg: 'px-7 py-4',
 }
 
-const variantClass = {
+const surfaceClass = {
   primary: 'bg-ink text-white hover:bg-ink/90',
   gold: 'bg-gold text-ink hover:bg-gold/90',
   inverted: 'bg-white text-ink',
-  text: 'text-ink',
 }
 
 export default function Button({
@@ -20,6 +19,7 @@ export default function Button({
   onClick,
   variant = 'primary',
   size = 'md',
+  tone = 'light',
   underline,
   arrow = false,
   fullWidthMobile = false,
@@ -31,8 +31,8 @@ export default function Button({
   const showUnderline = underline ?? isText
 
   const base = isText
-    ? 'group inline-flex items-center text-sm'
-    : `group relative inline-flex items-center justify-center text-sm transition-colors ${sizeClass[size]}`
+    ? `group inline-flex items-center text-sm ${tone === 'dark' ? 'text-white' : 'text-ink'}`
+    : `group relative inline-flex items-center justify-center text-sm transition-colors ${sizeClass[size]} ${surfaceClass[variant]}`
 
   const widthClass = fullWidthMobile && !isText ? 'w-full sm:w-auto' : ''
 
@@ -59,7 +59,7 @@ export default function Button({
     </>
   )
 
-  const cls = `${base} ${variantClass[variant]} ${widthClass} ${className}`
+  const cls = `${base} ${widthClass} ${className}`
     .trim()
     .replace(/\s+/g, ' ')
 

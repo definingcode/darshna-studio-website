@@ -5,17 +5,18 @@ export default function SectionLabel({
   tone = 'light',
   className = '',
 }) {
+  const muted = tone === 'dark' ? 'text-white/70' : 'text-mid'
   const phraseColor = tone === 'dark' ? 'text-white' : 'text-ink'
   return (
     <div
       className={`flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-medium uppercase tracking-[0.08em] ${className}`}
     >
-      <span className="text-mid">
+      <span className={muted}>
         {number} / {label}
       </span>
       {phrase && (
         <>
-          <span className="text-mid" aria-hidden="true">
+          <span className={muted} aria-hidden="true">
             ·
           </span>
           <span className={phraseColor}>{phrase}</span>
