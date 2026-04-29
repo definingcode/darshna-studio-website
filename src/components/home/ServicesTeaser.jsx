@@ -30,7 +30,7 @@ export default function ServicesTeaser() {
               What we shoot<span className="text-gold">.</span>
             </h2>
             <p className="mt-6 text-mid leading-relaxed">
-              Seven disciplines. One studio.
+              Disciplines, in-house. Briefed under one roof.
             </p>
             <div className="mt-10">
               <Button to="/services" variant="text" arrow>

@@ -10,7 +10,7 @@ export default function Services() {
       <PageHero
         eyebrow={<SectionLabel number="01" label="Services" />}
         headline="What we do."
-        sub="Seven disciplines. One studio. Thirty-three years of practice."
+        sub="Disciplines, in-house. Three decades of practice."
       />
 
       <div className="bg-white">
