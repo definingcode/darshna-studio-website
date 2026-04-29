@@ -23,13 +23,11 @@ export default function Hero() {
 
       <Container className="relative z-10 min-h-[85vh] flex flex-col justify-center py-32 lg:py-40">
         <h1 className="text-[clamp(48px,6vw,96px)] font-bold tracking-[-0.02em] leading-[1.05] text-white">
-          India's frames, since 1993<span className="text-gold">.</span>
+          India, on film. Since film. Now going global<span className="text-gold">.</span>
         </h1>
 
         <p className="mt-8 max-w-[640px] text-base md:text-lg leading-relaxed text-white/70">
-          A studio out of Ahmedabad, three decades old. Filmmaking,
-          photography and event coverage for India's industries, brands and
-          milestones.
+          Founded 1993, in Ahmedabad. Now filming across and beyond India.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
