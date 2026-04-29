@@ -28,12 +28,12 @@ export default function LogoMarquee() {
             <div
               key={`${c.name}-${i}`}
               aria-hidden={i >= clients.length ? 'true' : undefined}
-              className="flex-shrink-0 pr-16 lg:pr-24 flex items-center justify-center"
+              className="flex-shrink-0 pr-16 lg:pr-24 flex items-center"
             >
               <img
                 src={`/logos/clients/${c.file}`}
                 alt={c.alt}
-                className="h-8 lg:h-10 w-auto object-contain transition-all duration-300"
+                className="w-32 lg:w-40 h-auto object-contain transition-all duration-300"
                 style={{ filter: dimmed }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.filter = lit
