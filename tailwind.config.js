@@ -9,6 +9,7 @@ export default {
         ink: 'var(--ink)',
         mid: 'var(--mid)',
         soft: 'var(--soft)',
+        cream: 'var(--cream)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
