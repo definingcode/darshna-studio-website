@@ -2,12 +2,8 @@ import { clients } from '../../data/clients'
 import Container from '../ui/Container'
 import SectionLabel from '../ui/SectionLabel'
 
-const styleClasses = {
-  sans: 'font-sans font-normal',
-  'sans-bold': 'font-sans font-bold tracking-tight',
-  serif: 'font-serif font-normal',
-  'serif-italic': 'font-serif italic',
-}
+const dimmed = 'grayscale(1) brightness(0.4) opacity(0.7)'
+const lit = 'grayscale(0) brightness(1) opacity(1)'
 
 export default function LogoMarquee() {
   const doubled = [...clients, ...clients]
@@ -29,13 +25,25 @@ export default function LogoMarquee() {
       <div className="marquee-wrap relative w-full overflow-hidden marquee-mask h-[80px] lg:h-[120px]">
         <div className="marquee-track flex h-full items-center">
           {doubled.map((c, i) => (
-            <span
+            <div
               key={`${c.name}-${i}`}
               aria-hidden={i >= clients.length ? 'true' : undefined}
-              className={`${styleClasses[c.style]} text-2xl lg:text-3xl text-mid hover:text-ink transition-colors whitespace-nowrap shrink-0 pr-16 lg:pr-24`}
+              className="flex-shrink-0 pr-16 lg:pr-24 flex items-center justify-center"
             >
-              {c.name}
-            </span>
+              <img
+                src={`/logos/clients/${c.file}`}
+                alt={c.alt}
+                className="h-8 lg:h-10 w-auto object-contain transition-all duration-300"
+                style={{ filter: dimmed }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.filter = lit
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.filter = dimmed
+                }}
+                loading="lazy"
+              />
+            </div>
           ))}
         </div>
       </div>
