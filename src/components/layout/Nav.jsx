@@ -9,7 +9,6 @@ const links = [
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
   { to: '/portfolio', label: 'Portfolio' },
-  { to: '/contact', label: 'Contact' },
 ]
 
 function Wordmark({ tone = 'ink' }) {
