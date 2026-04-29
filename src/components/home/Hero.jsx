@@ -1,21 +1,25 @@
 import Container from '../ui/Container'
 import Button from '../ui/Button'
 
+// TODO: replace with compressed showreel cut, 1080p max ~5MB,
+// muted ambient B-roll preferred over edited reel
+const videoSrc = ''
+
 export default function Hero() {
   return (
     <section className="relative bg-ink overflow-hidden">
-      {/* TODO: replace src with compressed showreel cut, 1080p max ~5MB,
-          muted ambient B-roll preferred over edited reel */}
-      <video
-        className="hero-video absolute inset-0 w-full h-full object-cover z-0"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        src=""
-        aria-hidden="true"
-      />
+      {videoSrc && (
+        <video
+          className="hero-video absolute inset-0 w-full h-full object-cover z-0"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          src={videoSrc}
+          aria-hidden="true"
+        />
+      )}
       <div
         className="absolute inset-0 z-[5] bg-gradient-to-b from-ink/40 via-ink/30 to-ink/60"
         aria-hidden="true"
