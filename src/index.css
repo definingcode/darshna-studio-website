@@ -51,4 +51,7 @@ body {
   .marquee-track {
     animation: none;
   }
+  .hero-video {
+    display: none;
+  }
 }
