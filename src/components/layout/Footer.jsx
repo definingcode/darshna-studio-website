@@ -56,7 +56,7 @@ export default function Footer() {
   return (
     <footer className="bg-ink text-mid">
       <Container className="py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           <div>
             <img
               src="/logos/darshna-stacked-white.svg"
@@ -68,76 +68,78 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
-            <h3 className="text-white text-xs font-medium uppercase tracking-[0.08em]">
-              Navigate
-            </h3>
-            <ul className="mt-6 space-y-3 text-sm">
-              {navLinks.map((l) => (
-                <li key={l.to}>
-                  <Link
-                    to={l.to}
+          <div className="grid grid-cols-2 gap-8 md:gap-12 lg:contents">
+            <div>
+              <h3 className="text-white text-xs font-medium uppercase tracking-[0.08em]">
+                Navigate
+              </h3>
+              <ul className="mt-6 space-y-3 text-sm">
+                {navLinks.map((l) => (
+                  <li key={l.to}>
+                    <Link
+                      to={l.to}
+                      className="hover:text-white transition-colors"
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-white text-xs font-medium uppercase tracking-[0.08em]">
+                Studio
+              </h3>
+              <address className="not-italic mt-6 text-sm space-y-3">
+                <div className="space-y-1">
+                  <div>24, Jivraj Park Shopping Center</div>
+                  <div>Vidhyani Ketan School, Khodiyar Nagar Road</div>
+                  <div>Ahmedabad 382350</div>
+                </div>
+                <div>
+                  <a
+                    href="tel:+918980540857"
                     className="hover:text-white transition-colors"
                   >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-white text-xs font-medium uppercase tracking-[0.08em]">
-              Studio
-            </h3>
-            <address className="not-italic mt-6 text-sm space-y-3">
-              <div className="space-y-1">
-                <div>24, Jivraj Park Shopping Center</div>
-                <div>Vidhyani Ketan School, Khodiyar Nagar Road</div>
-                <div>Ahmedabad 382350</div>
-              </div>
-              <div>
+                    +91 89805 40857
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="mailto:Info@darshnastudio.com"
+                    className="hover:text-white transition-colors"
+                  >
+                    info@darshnastudio.com
+                  </a>
+                </div>
+              </address>
+              <div className="mt-6 flex gap-5">
+                {/* TODO: needs value */}
                 <a
-                  href="tel:+918980540857"
+                  href="#"
+                  aria-label="Instagram"
                   className="hover:text-white transition-colors"
                 >
-                  +91 89805 40857
+                  <InstagramIcon />
                 </a>
-              </div>
-              <div>
+                {/* TODO: needs value */}
                 <a
-                  href="mailto:Info@darshnastudio.com"
+                  href="#"
+                  aria-label="YouTube"
                   className="hover:text-white transition-colors"
                 >
-                  info@darshnastudio.com
+                  <YoutubeIcon />
+                </a>
+                {/* TODO: needs value */}
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="hover:text-white transition-colors"
+                >
+                  <LinkedinIcon />
                 </a>
               </div>
-            </address>
-            <div className="mt-6 flex gap-5">
-              {/* TODO: needs value */}
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="hover:text-white transition-colors"
-              >
-                <InstagramIcon />
-              </a>
-              {/* TODO: needs value */}
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="hover:text-white transition-colors"
-              >
-                <YoutubeIcon />
-              </a>
-              {/* TODO: needs value */}
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="hover:text-white transition-colors"
-              >
-                <LinkedinIcon />
-              </a>
             </div>
           </div>
         </div>
