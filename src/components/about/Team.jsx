@@ -20,7 +20,9 @@ export default function Team() {
               aria-hidden="true"
             />
             <h2 className="text-[clamp(36px,4vw,52px)] font-bold tracking-[-0.025em] leading-[1.1] text-ink mb-6">
-              Fifty people. One studio. Every discipline<span className="text-gold">.</span>
+              Fifty plus people.<br />
+              One studio.<br />
+              Every discipline<span className="text-gold">.</span>
             </h2>
             <p className="text-[17px] leading-[1.7] text-mid max-w-[480px]">
               <strong className="text-ink font-medium">
