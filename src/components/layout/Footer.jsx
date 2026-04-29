@@ -90,13 +90,29 @@ export default function Footer() {
             <h3 className="text-white text-xs font-medium uppercase tracking-[0.08em]">
               Studio
             </h3>
-            <ul className="mt-6 space-y-3 text-sm">
-              <li>Ahmedabad, Gujarat</li>
-              {/* TODO: needs value */}
-              <li>[Phone]</li>
-              {/* TODO: needs value */}
-              <li>[Email]</li>
-            </ul>
+            <address className="not-italic mt-6 text-sm space-y-3">
+              <div className="space-y-1">
+                <div>24, Jivraj Park Shopping Center</div>
+                <div>Vidhyani Ketan School, Khodiyar Nagar Road</div>
+                <div>Ahmedabad 382350</div>
+              </div>
+              <div>
+                <a
+                  href="tel:+918980540857"
+                  className="hover:text-white transition-colors"
+                >
+                  +91 89805 40857
+                </a>
+              </div>
+              <div>
+                <a
+                  href="mailto:Info@darshnastudio.com"
+                  className="hover:text-white transition-colors"
+                >
+                  info@darshnastudio.com
+                </a>
+              </div>
+            </address>
             <div className="mt-6 flex gap-5">
               {/* TODO: needs value */}
               <a

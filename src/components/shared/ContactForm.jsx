@@ -120,8 +120,14 @@ export default function ContactForm() {
 
       {status === 'error' && (
         <p className="text-mid text-sm">
-          {/* TODO: replace [email] placeholder once contact email is provided */}
-          Something went wrong. Please email us directly at [email].
+          Something went wrong. Please email us directly at{' '}
+          <a
+            href="mailto:Info@darshnastudio.com"
+            className="text-ink underline"
+          >
+            info@darshnastudio.com
+          </a>
+          .
         </p>
       )}
 

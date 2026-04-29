@@ -31,12 +31,40 @@ export default function Contact() {
             </div>
             <div className="lg:col-span-5">
               <div className="divide-y divide-soft border-y border-soft">
-                {/* TODO: needs value */}
-                <ContactItem label="Studio" value="[Ahmedabad address]" />
-                {/* TODO: needs value */}
-                <ContactItem label="Phone" value="[phone]" />
-                {/* TODO: needs value */}
-                <ContactItem label="Email" value="[email]" />
+                <ContactItem
+                  label="Studio"
+                  value={
+                    <span className="not-italic">
+                      24, Jivraj Park Shopping Center
+                      <br />
+                      Vidhyani Ketan School, Khodiyar Nagar Road
+                      <br />
+                      Ahmedabad 382350
+                    </span>
+                  }
+                />
+                <ContactItem
+                  label="Phone"
+                  value={
+                    <a
+                      href="tel:+918980540857"
+                      className="hover:text-mid transition-colors"
+                    >
+                      +91 89805 40857
+                    </a>
+                  }
+                />
+                <ContactItem
+                  label="Email"
+                  value={
+                    <a
+                      href="mailto:Info@darshnastudio.com"
+                      className="hover:text-mid transition-colors"
+                    >
+                      info@darshnastudio.com
+                    </a>
+                  }
+                />
                 <ContactItem
                   label="Hours"
                   value="Monday to Saturday, 10am to 7pm IST"
