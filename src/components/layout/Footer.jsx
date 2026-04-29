@@ -23,15 +23,6 @@ function InstagramIcon() {
   )
 }
 
-function YoutubeIcon() {
-  return (
-    <svg {...iconProps}>
-      <rect x="2.5" y="6" width="19" height="12" rx="3" />
-      <path d="M10.5 9.5v5l4-2.5z" />
-    </svg>
-  )
-}
-
 function LinkedinIcon() {
   return (
     <svg {...iconProps}>
@@ -115,25 +106,19 @@ export default function Footer() {
                 </div>
               </address>
               <div className="mt-6 flex gap-5">
-                {/* TODO: needs value */}
                 <a
-                  href="#"
+                  href="https://www.instagram.com/darshnastudio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="hover:text-white transition-colors"
                 >
                   <InstagramIcon />
                 </a>
-                {/* TODO: needs value */}
                 <a
-                  href="#"
-                  aria-label="YouTube"
-                  className="hover:text-white transition-colors"
-                >
-                  <YoutubeIcon />
-                </a>
-                {/* TODO: needs value */}
-                <a
-                  href="#"
+                  href="https://www.linkedin.com/company/darshnastudio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="hover:text-white transition-colors"
                 >
